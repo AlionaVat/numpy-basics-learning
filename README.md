@@ -1,42 +1,67 @@
-# numpy-basics-learning
-Aspiring Data Scientist | Python &amp; NumPy Learner  Currently building a strong foundation in data science using Python. This GitHub showcases my learning projects, hands-on practice, and progress with NumPy, data analysis, and related tools.
-# NumPy Basics – Learning Project
+import numpy as np
 
-## 📌 Overview
-This repository contains a simple Python script that demonstrates **fundamental NumPy concepts**.  
-It was created as part of my learning journey in **Python for Data Science**.
+# -------------------------------
+# Creating NumPy Arrays
+# -------------------------------
 
-The goal of this project is to understand how NumPy arrays work and how they are used for numerical computations and matrix operations.
+# 1D array
+arr_1d = np.array([1, 2, 3, 4, 5])
+print("1D Array:", arr_1d)
 
----
+# 2D array
+arr_2d = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+print("\n2D Array:\n", arr_2d)
 
-## 🧠 Concepts Covered
-The script includes examples of:
+# -------------------------------
+# Array Attributes
+# -------------------------------
 
-- Creating **1D and 2D NumPy arrays**
-- Exploring array properties:
-  - `ndim` – number of dimensions
-  - `shape` – rows and columns
-  - `size` – total number of elements
-- **Indexing and slicing** arrays
-- Performing **element-wise operations**:
-  - Addition
-  - Multiplication
-- **Matrix multiplication** using `np.dot`
-- Basic **statistical operations**, such as calculating the mean
+print("\nArray Dimensions (ndim):", arr_2d.ndim)
+print("Array Shape:", arr_2d.shape)
+print("Array Size:", arr_2d.size)
 
----
+# -------------------------------
+# Indexing and Slicing
+# -------------------------------
 
-## 🛠 Technologies Used
-- **Python 3**
-- **NumPy**
+print("\nElement from 1D array (index 2):", arr_1d[2])
+print("Second row of 2D array:", arr_2d[1])
+print("Second column of 2D array:", arr_2d[:, 1])
 
----
+# -------------------------------
+# Array Operations
+# -------------------------------
 
-## ▶️ How to Run
-1. Make sure Python is installed  
-2. Install NumPy:
-   ```bash
-   pip install numpy
-3. Run the script:
-   python numpy_basics.py
+array1 = np.array([1, 2, 3])
+array2 = np.array([4, 5, 6])
+
+# Addition
+addition_result = array1 + array2
+print("\nArray Addition:", addition_result)
+
+# Multiplication
+multiplication_result = array1 * array2
+print("Array Multiplication:", multiplication_result)
+
+# -------------------------------
+# Matrix Multiplication
+# -------------------------------
+
+matrix1 = np.array([[1, 2], [3, 4]])
+matrix2 = np.array([[5, 6], [7, 8]])
+
+matrix_result = np.dot(matrix1, matrix2)
+print("\nMatrix Multiplication Result:\n", matrix_result)
+
+# -------------------------------
+# Statistical Operations
+# -------------------------------
+
+data = np.array([1, 2, 3, 4, 5])
+mean_value = np.mean(data)
+print("\nMean of data:", mean_value)
+
